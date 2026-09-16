@@ -1,0 +1,204 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieRent - Renta de Películas Digitales</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <h1 id="titulo-principal">MovieRent</h1>
+            <p>Tu plataforma favorita de renta y estreno de películas digitales en casa.</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#intro">Película</a></li>
+                <li><a href="#ficha">Ficha Técnica</a></li>
+                <li><a href="#trailer">Tráiler</a></li>
+                <li><a href="#precios">Precios</a></li>
+                <li><a href="#contacto">Rentar</a></li>
+                <li><a href="datos.xml" target="_blank" class="xml-link">Catálogo XML</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <section id="intro" class="section-box">
+            <h2>Estreno Exclusivo: Zona Cero (Colony)</h2>
+
+            <p class="tagline">
+                Una implacable lucha por la supervivencia en una cuarentena zombi sin escape.
+            </p>
+
+            <img src="Imagenes/Pelicula1.jpg"
+                 alt="Póster promocional de Zona Cero Colony"
+                 class="responsive-img">
+
+            <p>
+                <strong>Sinopsis:</strong> Tras la propagación repentina de un virus devastador en Corea del Sur, una colonia residencial de alta seguridad queda completamente aislada. Los supervivientes deberán enfrentarse a oleadas de infectados hiperagresivos y tomar decisiones límite para salvar sus vidas antes de que la zona sea erradicada.
+            </p>
+        </section>
+
+        <section id="ficha" class="section-box layout-grid">
+
+            <div class="menu-col">
+                <h3 class="section-title">Detalles Técnicos</h3>
+
+                <ul>
+                    <li><strong>Título original:</strong> Colony (Zona Cero)</li>
+                    <li><strong>Género:</strong> Terror, Acción, Suspenso Zombi</li>
+                    <li><strong>País de origen:</strong> Corea del Sur</li>
+                    <li><strong>Duración:</strong> 118 minutos</li>
+                    <li><strong>Clasificación:</strong> B-15 (Mayores de 15 años)</li>
+                </ul>
+            </div>
+
+            <div class="menu-col">
+                <h3 class="section-title">¿Cómo rentar y ver hoy?</h3>
+
+                <ol>
+                    <li>Selecciona tu formato preferido en la tabla de precios.</li>
+                    <li>Completa tus datos en el formulario inferior.</li>
+                    <li>Recibe tu código de acceso digital por correo.</li>
+                    <li>¡Disfruta durante 48 horas en cualquier dispositivo!</li>
+                </ol>
+            </div>
+
+            <div class="full-width" id="precios">
+
+                <h3>Opciones de Alquiler Digital (Acceso por 48 horas)</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Formato de Video</th>
+                            <th>Resolución / Audio</th>
+                            <th>Precio (MXN)</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Estándar (SD)</td>
+                            <td>480p - Audio Estéreo 2.0</td>
+                            <td>$35.00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Alta Definición (HD)</td>
+                            <td>1080p - Audio Dolby Digital 5.1</td>
+                            <td>$50.00</td>
+                        </tr>
+
+                        <tr class="promo-row">
+                            <td>Ultra HD (4K HDR) ⭐ Promo Estreno</td>
+                            <td>2160p 4K - Dolby Atmos / Audio Espacial</td>
+                            <td>$65.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+
+        <section id="trailer" class="section-box">
+
+            <h2>Tráiler Oficial</h2>
+
+            <p>
+                Mira un adelanto del terror y la acción que te espera en
+                <em>Zona Cero</em>:
+            </p>
+
+            <div class="video-container">
+
+                <iframe
+                    src="https://www.youtube.com/embed/_Ru4_LzLg_E"
+                    title="Tráiler de Zona Cero Colony"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+        </section>
+
+        <section id="contacto" class="section-box">
+
+            <h2 class="section-title">Solicitar Renta Digital</h2>
+
+            <form id="contact-form" method="POST">
+
+                <label for="nombre">Nombre completo:</label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    required
+                    placeholder="Tu nombre"
+                    pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{3,}">
+
+                <label for="correo">Correo electrónico:</label>
+
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    required
+                    placeholder="tuemail@ejemplo.com">
+
+                <label for="asunto">Asunto / Formato:</label>
+
+                <select id="asunto" name="asunto" required>
+
+                    <option value="" disabled selected>
+                        Selecciona una calidad
+                    </option>
+
+                    <option value="SD">$35 - SD</option>
+                    <option value="HD">$50 - HD</option>
+                    <option value="4K">$65 - 4K</option>
+
+                </select>
+
+                <label for="mensaje">Mensaje / Comentarios:</label>
+
+                <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="4"
+                    required
+                    placeholder="Dispositivo o comentarios"
+                    pattern=".{10,}">
+                </textarea>
+
+                <button type="submit" class="submit-button">
+                    Confirmar Renta
+                </button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+
+        <div class="container">
+
+            <p>&copy; 2025 MovieRent. Proyecto estudiantil.</p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
+```

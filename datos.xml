@@ -1,0 +1,34 @@
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<catalogo_peliculas lang="es">
+
+    <pelicula id="MOV-001">
+        <titulo>Zona Cero (Colony)</titulo>
+        <pais>Corea del Sur</pais>
+        <genero>Terror / Zombis</genero>
+        <duracion_min>118</duracion_min>
+        <precio_renta moneda="MXN">65.00</precio_renta>
+        <sinopsis>Una colonia residencial en cuarentena lucha por sobrevivir a una infección zombi.</sinopsis>
+    </pelicula>
+
+    <pelicula id="MOV-002">
+        <titulo>Tren a Busan (Train to Busan)</titulo>
+        <pais>Corea del Sur</pais>
+        <genero>Acción / Suspenso</genero>
+        <duracion_min>118</duracion_min>
+        <precio_renta moneda="MXN">45.00</precio_renta>
+        <sinopsis>Pasajeros en un tren de alta velocidad deben defenderse de un brote zombi en ruta a Busan.</sinopsis>
+    </pelicula>
+
+    <pelicula id="MOV-003">
+        <titulo>Península</titulo>
+        <pais>Corea del Sur</pais>
+        <genero>Acción / Postapocalíptico</genero>
+        <duracion_min>116</duracion_min>
+        <precio_renta moneda="MXN">50.00</precio_renta>
+        <sinopsis>Un soldado regresa a la península devastada en una misión de rescate casi imposible.</sinopsis>
+    </pelicula>
+
+</catalogo_peliculas>
+```
